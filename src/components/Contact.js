@@ -42,7 +42,7 @@ const social = [
 
 const Contact = () => {
   return (
-    <section className="shortpage contact-page">
+    <section className="shortpage contact-page" id="contact">
       <h3 className="page-title">Contact</h3>
       <div className="contact-line">
         <img className="contact-icons" src={email} alt="" />

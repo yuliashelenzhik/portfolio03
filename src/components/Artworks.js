@@ -23,7 +23,7 @@ const artworks = [
 
 const Artworks = () => {
   return (
-    <section className="artworks-page shortpage">
+    <section className="artworks-page shortpage" id="art">
       <h3 className="page-title">art skills</h3>
       <div className="artworks">
         {artworks.map((item) => {

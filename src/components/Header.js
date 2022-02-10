@@ -6,10 +6,18 @@ const Header = () => {
     <header>
       <img className="logo" src={logo} alt="" />
       <ul className="navbar">
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Art</li>
-        <li>Contact</li>
+        <a href="/">
+          <li>Home</li>
+        </a>
+        <a href="/#projects">
+          <li>Projects</li>
+        </a>
+        <a href="/#art">
+          <li>Art</li>
+        </a>
+        <a href="/#contact">
+          <li>Contact</li>
+        </a>
       </ul>
     </header>
   );

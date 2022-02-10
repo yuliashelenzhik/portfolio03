@@ -77,7 +77,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="shortpage projects-page">
+    <section className="shortpage projects-page" id="projects">
       <h3 className="page-title">Projects</h3>
       <div className="projects">
         {projects.map((item) => {
