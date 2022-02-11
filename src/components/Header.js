@@ -4,13 +4,13 @@ import logo from "./images/logo.png";
 const Header = () => {
   return (
     <header>
-      <img className="logo" src={logo} alt="" />
+      <img className="logo" src={logo} alt="Logo" />
       <ul className="navbar">
-        <a href="/">
-          <li>Home</li>
-        </a>
         <a href="/#projects">
           <li>Projects</li>
+        </a>
+        <a href="/#skills">
+          <li>Skills</li>
         </a>
         <a href="/#art">
           <li>Art</li>

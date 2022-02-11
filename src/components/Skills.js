@@ -11,55 +11,75 @@ import gatsby from "./images/skills/gatsby.png";
 const skills = [
   {
     id: 1,
-    title: "html",
+    title: "HTML",
     img: html,
+    description: "HyperText Markup Language",
   },
   {
     id: 2,
-    title: "css",
+    title: "CSS",
     img: css,
+    description: "Cascading Style Sheets",
   },
   {
     id: 3,
-    title: "js",
+    title: "Javascript",
     img: js,
+    description: "Programming language",
   },
   {
     id: 4,
-    title: "git",
+    title: "GIT",
     img: git,
+    description: "Version Control System",
   },
   {
     id: 5,
-    title: "bootstrap",
+    title: "Bootstrap",
     img: bootstrap,
+    description: "HTML, CSS, and JS library",
   },
   {
     id: 6,
-    title: "jquery",
+    title: "jQuery",
     img: jquery,
+    description: "JavaScript library",
   },
   {
     id: 7,
-    title: "react",
+    title: "React",
     img: react,
+    description: "JavaScript library for building user interfaces",
   },
   {
     id: 8,
-    title: "gatsby",
+    title: "Gatsby",
     img: gatsby,
+    description: "React-based framework",
   },
 ];
 
 const Skills = () => {
+  // const [isToggled, setIsToggled] = useState(false);
   return (
-    <section className="shortpage skills-page">
+    <section className="shortpage skills-page" id="skills">
       <h3 className="page-title">programming Skills</h3>
       <div className="skills">
         {skills.map((item) => {
           return (
             <article className="skill-article">
-              <img key={item.id} src={item.img} alt={item.title} />
+              <img
+                class="skill-img"
+                key={item.id}
+                src={item.img}
+                alt={item.title}
+                // onClick={() => setIsToggled(!isToggled)}
+              />
+              <div className="item-description">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+              {/* {isToggled && <p class="skill-description">{item.description}</p>} */}
             </article>
           );
         })}
