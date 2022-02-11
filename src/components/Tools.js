@@ -40,7 +40,7 @@ const tools = [
     img: ae,
   },
   {
-    id: 6,
+    id: 7,
     title: "Adobe InDesign",
     img: id,
   },
@@ -58,7 +58,7 @@ const Tools = () => {
       <div className="tools">
         {tools.map((item) => {
           return (
-            <article className="tool-article">
+            <article key={item.id} className="tool-article">
               <img src={item.img} alt={item.title} />
             </article>
           );

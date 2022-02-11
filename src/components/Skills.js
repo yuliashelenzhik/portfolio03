@@ -67,10 +67,9 @@ const Skills = () => {
       <div className="skills">
         {skills.map((item) => {
           return (
-            <article className="skill-article">
+            <article key={item.id} className="skill-article">
               <img
-                class="skill-img"
-                key={item.id}
+                className="skill-img"
                 src={item.img}
                 alt={item.title}
                 // onClick={() => setIsToggled(!isToggled)}

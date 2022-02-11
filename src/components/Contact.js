@@ -58,9 +58,9 @@ const Contact = () => {
       <div className="social">
         {social.map((item) => {
           return (
-            <article className="social-article">
+            <article key={item.id} className="social-article">
               <a href={item.link} target="_blank" rel="noreferrer noopener">
-                <img key={item.id} src={item.img} alt={item.title} />
+                <img src={item.img} alt={item.title} />
               </a>
             </article>
           );

@@ -28,8 +28,8 @@ const Artworks = () => {
       <div className="artworks">
         {artworks.map((item) => {
           return (
-            <article>
-              <img key={item.id} src={item.img} alt={item.title} />
+            <article key={item.id}>
+              <img src={item.img} alt={item.title} />
               <h4>{item.title}</h4>
             </article>
           );

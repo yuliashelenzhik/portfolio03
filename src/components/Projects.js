@@ -82,9 +82,9 @@ const Projects = () => {
       <div className="projects">
         {projects.map((item) => {
           return (
-            <article className="project-article">
+            <article key={item.id} className="project-article">
               <a href={item.link} target="_blank" rel="noreferrer noopener">
-                <img key={item.id} src={item.img} alt={item.title} />
+                <img src={item.img} alt={item.title} />
               </a>
               <h4>{item.title}</h4>
             </article>
