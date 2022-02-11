@@ -13,41 +13,49 @@ const tools = [
     id: 1,
     title: "Adobe Photoshop",
     img: ps,
+    description: "Creating, editing and retouching images",
   },
   {
     id: 2,
     title: "Adobe Lightroom",
     img: lr,
+    description: "Retouching photos",
   },
   {
     id: 3,
     title: "Adobe Illustrator",
     img: ai,
+    description: "Creating and editing images and icons",
   },
   {
     id: 4,
     title: "Adobe Xd",
     img: xd,
+    description: "Designing and prototyping UI",
   },
   {
     id: 5,
     title: "Adobe Premiere Pro",
     img: pr,
+    description: "Video Editing",
   },
   {
     id: 6,
     title: "Adobe After Effects",
     img: ae,
+    description: "Video Editing",
   },
   {
     id: 7,
     title: "Adobe InDesign",
     img: id,
+    description: "Designing documents",
   },
   {
     id: 8,
     title: "MS Office",
     img: office,
+    description: "MS Word, MS Excell, MS PowerPoint, MS Access",
   },
 ];
 
@@ -60,6 +68,10 @@ const Tools = () => {
           return (
             <article key={item.id} className="tool-article">
               <img src={item.img} alt={item.title} />
+              <div className="item-description">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
             </article>
           );
         })}

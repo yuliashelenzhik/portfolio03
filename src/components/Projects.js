@@ -19,7 +19,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Christmas Chinese vocabulary",
+    title: "Christmas in Chinese",
     link: "https://christmas-learn-chinese.netlify.app/",
     stack: "HTML, CSS, JS",
     img: christmas,
@@ -85,8 +85,10 @@ const Projects = () => {
             <article key={item.id} className="project-article">
               <a href={item.link} target="_blank" rel="noreferrer noopener">
                 <img src={item.img} alt={item.title} />
+                <div className="project-overlay">
+                  <h2>{item.title}</h2>
+                </div>
               </a>
-              <h4>{item.title}</h4>
             </article>
           );
         })}
