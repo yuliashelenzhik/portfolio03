@@ -191,6 +191,12 @@ header {
   border-radius: 1rem;
   transition: 1s ease;
 }
+.photo {
+  /* width: 100%; */
+  max-height: 120px;
+  object-fit: cover;
+  /* border: 2px solid salmon; */
+}
 /* .project-article img:hover {
   opacity: 1;
 } */
@@ -400,6 +406,29 @@ header {
   font-size: 0.5rem;
   text-align: center;
   padding: 0.5rem;
+}
+
+/* PHOTOGRAPHY */
+
+.photo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: hidden;
+}
+.photo-overlay-show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  visibility: visible;
+  opacity: 0.1;
+}
+.art-page {
+  padding-top: 3rem;
 }
 /* MEDIA QUERIES */
 
