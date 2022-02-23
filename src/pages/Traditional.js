@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import avril from "./traditional/avril.jpg";
 import piratebw from "./traditional/piratebw.jpg";
 import mcmahon from "./traditional/mcmahon.jpg";
@@ -13,6 +13,7 @@ import secretwindow from "./traditional/secretwindow.jpg";
 import piratecolor from "./traditional/piratecolor.jpg";
 import dadongred from "./traditional/dadongred.jpg";
 import dadong from "./traditional/dadong.jpg";
+import CloseIcon from "@mui/icons-material/Close";
 
 const tradArt = [
   {
@@ -86,9 +87,17 @@ const tradArt = [
     img: dadong,
   },
 ];
+
 const Traditional = () => {
+  const [modal, setModal] = useState(false);
+  const [tempImgSrc, setTempImgSrc] = useState("");
+
   return (
     <>
+      <div className={modal ? "modal open" : "modal"}>
+        <img src={tempImgSrc} alt="" />
+        <CloseIcon onClick={() => setModal(false)} />
+      </div>
       <h3 className="page-title art-page">Traditional Art</h3>
       <div className="projects">
         {tradArt.map((item, index) => {
@@ -98,8 +107,10 @@ const Traditional = () => {
                 src={item.img}
                 alt={item.title}
                 className="photo"
-                onClick={() => {
-                  console.log(item.title);
+                onClick={(img) => {
+                  setTempImgSrc(item.img);
+                  setModal(true);
+                  console.log(item.img);
                 }}
               />
             </article>

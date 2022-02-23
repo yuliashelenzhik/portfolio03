@@ -181,11 +181,10 @@ const Photo = () => {
       <div className={modal ? "modal open" : "modal"}>
         <img src={tempImgSrc} alt="" />
         <CloseIcon onClick={() => setModal(false)} />
-        {/* <h1>{tempImgSrc}</h1> */}
       </div>
       <h3 className="page-title art-page">Photography</h3>
       <div className="projects">
-        {photokids.map((item, index) => {
+        {photokids.map((item) => {
           return (
             <article key={item.id} className="project-article">
               <img
