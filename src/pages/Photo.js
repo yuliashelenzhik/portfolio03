@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import snowwhite from "./photo/kids/snowwhite.jpg";
 import blueflowers from "./photo/kids/blueflowers.jpg";
 import cutie from "./photo/kids/cutie.jpg";
@@ -27,6 +27,7 @@ import anflow from "./photo/adults/anflow.jpg";
 import avatar from "./photo/adults/avatar.jpg";
 import vicsun from "./photo/adults/vicsun.jpg";
 import viccof from "./photo/adults/viccof.jpg";
+import CloseIcon from "@mui/icons-material/Close";
 
 const photokids = [
   {
@@ -172,8 +173,16 @@ const photokids = [
 ];
 
 const Photo = () => {
+  const [modal, setModal] = useState(false);
+  const [tempImgSrc, setTempImgSrc] = useState("");
+
   return (
     <>
+      <div className={modal ? "modal open" : "modal"}>
+        <img src={tempImgSrc} alt="" />
+        <CloseIcon onClick={() => setModal(false)} />
+        {/* <h1>{tempImgSrc}</h1> */}
+      </div>
       <h3 className="page-title art-page">Photography</h3>
       <div className="projects">
         {photokids.map((item, index) => {
@@ -183,9 +192,10 @@ const Photo = () => {
                 src={item.img}
                 alt={item.title}
                 className="photo"
-                onClick={() => {
-                  // setShowModal((prev) => !prev);
-                  console.log(item.title);
+                onClick={(img) => {
+                  setTempImgSrc(item.img);
+                  setModal(true);
+                  console.log(item.img);
                 }}
               />
               {/* {showModal ? (
