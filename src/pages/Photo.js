@@ -174,7 +174,6 @@ const photokids = [
 const Photo = () => {
   return (
     <>
-      {/* <h1 className="photo-page">Photo</h1> */}
       <h3 className="page-title art-page">Photography</h3>
       <div className="projects">
         {photokids.map((item, index) => {
