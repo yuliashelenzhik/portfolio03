@@ -1,24 +1,9 @@
 import React, { useState } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import avatar from "./images/open.png";
 import avatar2 from "./images/blink2.png";
 import arrow from "./images/chevron-down.svg";
-// gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  // const avatarRef = useRef(null);
-
-  // useEffect(() => {
-  //   gsap.from(avatarRef.current, {
-  //     duration: 0.5,
-  //     autoAlpha: 0,
-  //     x: 40,
-  //     ease: "none",
-  //     delay: 0.5,
-  //   });
-  // }, []);
-
   const [isHovering, setIsHovering] = useState(false);
   function handleMouseEnter(e) {
     setIsHovering(true);

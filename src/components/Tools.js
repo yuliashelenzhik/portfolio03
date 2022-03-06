@@ -6,7 +6,7 @@ import xd from "./images/tools/Xd.png";
 import pr from "./images/tools/Premiere.png";
 import ae from "./images/tools/AfterEffects.png";
 import id from "./images/tools/indesign.png";
-import office from "./images/tools/MsOffice.png";
+import figma from "./images/tools/Figma-logo.svg";
 
 const tools = [
   {
@@ -53,9 +53,9 @@ const tools = [
   },
   {
     id: 8,
-    title: "MS Office",
-    img: office,
-    description: "MS Word, MS Excell, MS PowerPoint, MS Access",
+    title: "Figma",
+    img: figma,
+    description: "Vector graphics editor and prototyping tool",
   },
 ];
 

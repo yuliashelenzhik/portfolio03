@@ -8,6 +8,7 @@ import colors from "./images/projects/colors.png";
 import christmas from "./images/projects/christmas.png";
 import calculator from "./images/projects/calc.png";
 import dragdrop from "./images/projects/dragdrop.png";
+import driving from "./images/projects/driving.png";
 
 const projects = [
   {
@@ -72,6 +73,13 @@ const projects = [
     link: "https://codepen.io/yushel/full/NWgJZdW",
     stack: "HTML, CSS, JS, Bootstrap",
     img: colors,
+  },
+  {
+    id: 10,
+    title: "Parallax Project",
+    // link: "",
+    stack: "HTML, CSS, JS",
+    img: driving,
   },
 ];
 

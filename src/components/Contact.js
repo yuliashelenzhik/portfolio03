@@ -50,10 +50,11 @@ const Contact = () => {
       </div>
       <div className="contact-line">
         <img className="contact-icons" src={phone} alt="" />
-        <div className="phones">
-          <p>China +86 15600606357</p>
-          <p>Spain +34 644768671</p>
-        </div>
+        {/* <div className="phones"> */}
+        <p className="phones">China +86 15600606357</p>
+        <img className="contact-icons" src={phone} alt="" />
+        <p className="phones">Spain +34 644768671</p>
+        {/* </div> */}
       </div>
       <div className="social">
         {social.map((item) => {

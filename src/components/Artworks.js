@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import camera from "./images/artworks/camera.svg";
 import image from "./images/artworks/image.svg";
 import edit from "./images/artworks/edit.svg";
-// import Photo from "../pages/Photo";
-// import Digital from "../pages/Digital";
-// import Traditional from "../pages/Traditional";
 
 const artworks = [
   {
@@ -13,21 +10,18 @@ const artworks = [
     title: "Photo & Video",
     img: camera,
     path: "/photo",
-    // element: <Photo />,
   },
   {
     id: 2,
     title: "Digital Art",
     img: image,
-    path: "/digital",
-    // element: <Digital />,
+    path: "/",
   },
   {
     id: 3,
     title: "Traditional Art",
     img: edit,
     path: "/traditional",
-    // element: <Traditional />,
   },
 ];
 
@@ -38,10 +32,12 @@ const Artworks = () => {
       <div className="artworks">
         {artworks.map((item) => {
           return (
-            <article key={item.id}>
+            <article key={item.id} className="art-article">
               <Link to={item.path}>
                 <img src={item.img} alt={item.title} />
-                <h4>{item.title}</h4>
+                <div className="item-description">
+                  <h3>{item.title}</h3>
+                </div>
               </Link>
             </article>
           );
