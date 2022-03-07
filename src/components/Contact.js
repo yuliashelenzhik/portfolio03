@@ -62,6 +62,9 @@ const Contact = () => {
             <article key={item.id} className="social-article">
               <a href={item.link} target="_blank" rel="noreferrer noopener">
                 <img src={item.img} alt={item.title} />
+                <div className="item-description">
+                  <h3>{item.title}</h3>
+                </div>
               </a>
             </article>
           );
