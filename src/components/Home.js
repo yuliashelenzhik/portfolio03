@@ -39,7 +39,9 @@ const Home = () => {
           alt=""
         />
       </div>
-      <img className="arrow" src={arrow} alt="" />
+      <a href="/#projects">
+        <img className="arrow" src={arrow} alt="" />
+      </a>
     </section>
   );
 };
