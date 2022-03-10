@@ -93,7 +93,7 @@ const Projects = () => {
             <article key={item.id} className="project-article">
               <a href={item.link} target="_blank" rel="noreferrer noopener">
                 <img src={item.img} alt={item.title} />
-                <div className="project-overlay">
+                <div className="item-description">
                   <h2>{item.title}</h2>
                 </div>
               </a>
