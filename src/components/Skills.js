@@ -4,9 +4,10 @@ import css from "./images/skills/css.png";
 import js from "./images/skills/js.png";
 import git from "./images/skills/git.png";
 import bootstrap from "./images/skills/bootstrap.png";
-import jquery from "./images/skills/jquery.png";
+// import jquery from "./images/skills/jquery.png";
 import react from "./images/skills/react.png";
 import gatsby from "./images/skills/gatsby.png";
+import node from "./images/skills/nodejs.svg";
 
 const skills = [
   {
@@ -41,9 +42,9 @@ const skills = [
   },
   {
     id: 6,
-    title: "jQuery",
-    img: jquery,
-    description: "JavaScript library",
+    title: "Node JS",
+    img: node,
+    description: "JavaScript runtime environment",
   },
   {
     id: 7,
