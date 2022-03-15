@@ -95,11 +95,11 @@ const Traditional = () => {
   return (
     <>
       <div className={modal ? "modal open" : "modal"}>
-        <img src={tempImgSrc} alt="" />
+        <img src={tempImgSrc} alt="Open" />
         <CloseIcon onClick={() => setModal(false)} />
       </div>
       <h3 className="page-title art-page">Traditional Art</h3>
-      <div className="projects">
+      <div className="projects shortpage">
         {tradArt.map((item, index) => {
           return (
             <article key={item.id} className="project-article">
@@ -107,10 +107,9 @@ const Traditional = () => {
                 src={item.img}
                 alt={item.title}
                 className="photo"
-                onClick={(img) => {
+                onClick={() => {
                   setTempImgSrc(item.img);
                   setModal(true);
-                  console.log(item.img);
                 }}
               />
             </article>

@@ -33,6 +33,8 @@ a {
 }
 .shortpage {
   padding: 1rem 0 0 0;
+  max-width: 900px;
+  margin: 0 auto;
   /* border: solid 2px salmon; */
 }
 
@@ -95,23 +97,26 @@ header {
 .fullpage {
   width: 100vw;
   height: 100vh;
+  /* border: solid 2px salmon; */
 }
 .homepage {
+  overflow: hidden;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
 }
 .side {
   /* border: solid 2px orange; */
   width: 50%;
-  padding: 1rem;
 }
 .left {
   text-align: center;
-  /* border: solid 2px orange; */
+  width: 100%;
+  /* border: solid 2px blue; */
 }
 .right {
   position: relative;
@@ -120,10 +125,12 @@ header {
   height: 100%;
 }
 .left p {
+  /* border: solid 2px lightblue; */
   font-size: smaller;
   font-style: italic;
 }
 .avatar {
+  width: 95%;
   max-height: 70vh;
   object-fit: contain;
   position: absolute;
@@ -142,7 +149,7 @@ header {
   opacity: 0;
 }
 .avatar2show {
-  width: 100%;
+  width: 95%;
   max-height: 70vh;
   object-fit: contain;
   position: absolute;
@@ -150,6 +157,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 1;
+  /* border: solid 2px lightsalmon; */
 }
 .arrow {
   position: absolute;
@@ -179,7 +187,7 @@ header {
   );
   margin: 1rem auto;
   border-radius: 10px;
-  max-width: 1000px;
+  max-width: 900px;
 }
 .project-article {
   /* border: solid 2px green; */
@@ -330,9 +338,6 @@ header {
   font-size: 0.8rem;
 }
 /* ART */
-.artworks-page {
-  /* border: solid 2px purple; */
-}
 .artworks {
   display: flex;
   justify-content: center;
@@ -340,8 +345,11 @@ header {
   gap: 1rem;
   padding: 1rem 0;
   /* border: solid 2px green; */
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
+}
+.contact-page {
+  max-width: 900px !important;
 }
 .artworks article,
 .social-article {
@@ -504,21 +512,20 @@ header {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1000px) {
-  .projects,
-  .skills,
-  .tools {
-    /* margin: 1rem; */
-    /* border: solid 2px violet; */
+  .left {
+    padding-left: 2rem;
   }
-  .project-article {
+  .avatar,
+  .avatar2show {
+    /* border: solid 2px blue; */
+    max-width: 80%;
+  }
+  .homepage {
     /* border: solid 2px salmon; */
+    height: 100vh;
   }
   .project-article h4 {
     font-size: 0.7rem;
-    /* border: solid 2px salmon; */
-  }
-  .social {
-    /* margin: 1rem; */
     /* border: solid 2px salmon; */
   }
   .item-description h3 {
@@ -529,39 +536,53 @@ header {
     font-size: 0.5rem;
     padding: 0rem;
   }
-  .artworks-page {
-    /* border: solid 2px teal; */
-    /* padding: 0 1rem; */
-    /* border: solid 2px salmon; */
-  }
   .art-article img {
     padding: 10% !important;
     /* border: solid 2px salmon; */
   }
+  .shortpage {
+    margin: 0 1rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    /* padding: 0.5rem; */
-  }
   .page-title {
     font-size: 1rem;
   }
   .homepage {
     flex-direction: column-reverse;
     /* border: solid 2px orange; */
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .side {
-    /* border: solid 2px green; */
     width: 80%;
+    height: 50%;
+
+    /* border: solid 2px green; */
   }
   .right {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    height: 60vh;
     /* border: solid 2px purple; */
+    width: 100%;
+  }
+  .left {
+    height: 40vh;
+    width: 100%;
+    font-size: 1rem;
+    /* border: solid 2px yellow; */
+  }
+  .left h1,
+  h3 {
+    margin-right: 2rem;
+  }
+  .left p {
+    font-size: 1rem;
+    /* border: solid 2px yellow; */
+    margin-right: 2rem;
+    padding-bottom: 1rem;
   }
   .avatar {
     max-width: 250px;
@@ -580,15 +601,7 @@ header {
     padding-right: 0.5rem;
     /* border: solid 2px purple; */
   }
-  .left {
-    font-size: 1rem;
-    /* border: solid 2px red; */
-  }
-  .left p {
-    font-size: 1rem;
-    /* border: solid 2px yellow; */
-    padding-bottom: 1rem;
-  }
+
   .project-article img,
   .skill-article img,
   .tool-article img,
@@ -618,8 +631,7 @@ header {
     padding: 15% !important;
   }
   .arrow {
-    bottom: -0.2rem;
-    /* opacity: 0.7; */
+    bottom: 1rem;
     /* border: solid 2px red; */
   }
   .contact-page {
@@ -631,14 +643,10 @@ header {
     /* border: solid 2px green; */
     margin: auto;
   }
-  .project-article img {
-    /* border: solid 2px yellow;
-    width: 100%;
-    object-fit: cover; */
-    /* width: 100% !important; */
-  }
 }
 
+@media screen and (max-width: 450px) {
+}
 html {
   scroll-behavior: smooth;
 }

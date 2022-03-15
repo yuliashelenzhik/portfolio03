@@ -179,11 +179,11 @@ const Photo = () => {
   return (
     <>
       <div className={modal ? "modal open" : "modal"}>
-        <img src={tempImgSrc} alt="" />
+        <img src={tempImgSrc} alt="Open" />
         <CloseIcon onClick={() => setModal(false)} />
       </div>
       <h3 className="page-title art-page">Photography</h3>
-      <div className="projects">
+      <div className="projects shortpage">
         {photokids.map((item) => {
           return (
             <article key={item.id} className="project-article">
@@ -191,24 +191,11 @@ const Photo = () => {
                 src={item.img}
                 alt={item.title}
                 className="photo"
-                onClick={(img) => {
+                onClick={() => {
                   setTempImgSrc(item.img);
                   setModal(true);
-                  console.log(item.img);
                 }}
               />
-              {/* {showModal ? (
-                <div className="photo-overlay-show">
-                  <img className="full-photo" src={item.img} alt={item.title} />
-                </div>
-              ) : null} */}
-              {/* <div
-                className="photo-overlay"
-                showModal={showModal}
-                setShowModal={setShowModal}
-              >
-                <img className="full-photo" src={item.img} alt={item.title} />
-              </div> */}
             </article>
           );
         })}

@@ -45,14 +45,14 @@ const Contact = () => {
     <section className="shortpage contact-page" id="contact">
       <h3 className="page-title">Contact</h3>
       <div className="contact-line">
-        <img className="contact-icons" src={email} alt="" />
+        <img className="contact-icons" src={email} alt="Email Icon" />
         <p>yulia_yuste@hotmail.com</p>
       </div>
       <div className="contact-line">
-        <img className="contact-icons" src={phone} alt="" />
+        <img className="contact-icons" src={phone} alt="Phone Icon" />
         {/* <div className="phones"> */}
         <p className="phones">China +86 15600606357</p>
-        <img className="contact-icons" src={phone} alt="" />
+        <img className="contact-icons" src={phone} alt="Phone Icon" />
         <p className="phones">Spain +34 644768671</p>
         {/* </div> */}
       </div>

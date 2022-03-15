@@ -29,18 +29,18 @@ const Home = () => {
         </p>
       </div>
       <div className="side right">
-        <img className="avatar" src={avatar} alt="" />
+        <img className="avatar" src={avatar} alt="Avatar Open Eyes" />
         <img
           className={isHovering ? "avatar2show" : "avatar2"}
           // className="avatar2show"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           src={avatar2}
-          alt=""
+          alt="Avatar Close Eyes"
         />
       </div>
       <a href="/#projects">
-        <img className="arrow" src={arrow} alt="" />
+        <img className="arrow" src={arrow} alt="Arrow Icon" />
       </a>
     </section>
   );

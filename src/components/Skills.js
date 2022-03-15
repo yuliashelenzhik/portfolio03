@@ -4,7 +4,6 @@ import css from "./images/skills/css.png";
 import js from "./images/skills/js.png";
 import git from "./images/skills/git.png";
 import bootstrap from "./images/skills/bootstrap.png";
-// import jquery from "./images/skills/jquery.png";
 import react from "./images/skills/react.png";
 import gatsby from "./images/skills/gatsby.png";
 import node from "./images/skills/nodejs.svg";
@@ -69,17 +68,11 @@ const Skills = () => {
         {skills.map((item) => {
           return (
             <article key={item.id} className="skill-article">
-              <img
-                className="skill-img"
-                src={item.img}
-                alt={item.title}
-                // onClick={() => setIsToggled(!isToggled)}
-              />
+              <img className="skill-img" src={item.img} alt={item.title} />
               <div className="item-description">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
-              {/* {isToggled && <p class="skill-description">{item.description}</p>} */}
             </article>
           );
         })}
